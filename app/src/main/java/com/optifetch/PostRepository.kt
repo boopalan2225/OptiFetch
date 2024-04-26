@@ -2,6 +2,7 @@ package com.optifetch
 
 import androidx.lifecycle.LiveData
 import androidx.paging.*
+import com.optifetch.models.Post
 import com.optifetch.network.IRemoteDataSource
 import com.optifetch.paging.PostPagingSource
 

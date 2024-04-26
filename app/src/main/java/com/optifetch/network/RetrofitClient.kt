@@ -1,6 +1,7 @@
-package com.optifetch
+package com.optifetch.network
 
-import com.optifetch.network.ApiService
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -20,10 +21,3 @@ object ApiClient {
         RetrofitClient.retrofit.create(ApiService::class.java)
     }
 }
-
-data class Post(
-    val userId: Int,
-    val id: Int,
-    val title: String,
-    val body: String
-)

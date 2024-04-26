@@ -1,9 +1,9 @@
 package com.optifetch.network
 
-import com.optifetch.Post
+import com.optifetch.models.Post
 import retrofit2.Response
 
-class RemoteDataSource /*@Inject constructor*/(private val apiService: ApiService) :
+class RemoteDataSource (private val apiService: ApiService) :
     IRemoteDataSource {
      override suspend fun fetchPostList(
          page: Int

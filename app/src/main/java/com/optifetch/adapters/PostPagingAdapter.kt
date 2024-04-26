@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.optifetch.Post
+import com.optifetch.models.Post
 import com.optifetch.databinding.PostItemLayoutBinding
 
 class PostPagingAdapter(private val clickListener: PostClickListener) :

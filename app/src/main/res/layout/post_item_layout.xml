@@ -7,7 +7,7 @@
 
         <variable
             name="item"
-            type="com.optifetch.Post" />
+            type="com.optifetch.models.Post" />
 
         <variable
             name="clickListener"

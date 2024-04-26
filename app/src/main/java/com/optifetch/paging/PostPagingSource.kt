@@ -3,7 +3,7 @@ package com.optifetch.paging
 import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.optifetch.Post
+import com.optifetch.models.Post
 import com.optifetch.network.IRemoteDataSource
 
 class PostPagingSource(

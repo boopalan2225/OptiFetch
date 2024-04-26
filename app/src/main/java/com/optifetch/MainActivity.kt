@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         }
         setUpStatusBar()
         setContentView(binding.root)
-
         initializeAdapter()
     }
 
