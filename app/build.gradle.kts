@@ -26,6 +26,11 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        this.dataBinding = true
+        this.viewBinding = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -36,12 +41,12 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.databinding.common)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     testImplementation(libs.junit)
