@@ -1,5 +1,6 @@
 package com.optifetch
 
+import com.optifetch.network.ApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
