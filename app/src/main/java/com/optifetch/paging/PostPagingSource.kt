@@ -1,18 +1,17 @@
 package com.optifetch.paging
 
-import android.graphics.Movie
 import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.optifetch.Post
 import com.optifetch.network.IRemoteDataSource
 
-class MoviePagingSource(
+class PostPagingSource(
     private val remoteDataSource: IRemoteDataSource
 ) :
     PagingSource<Int, Post>() {
 
-        private val TAG = MoviePagingSource::class.simpleName
+        private val TAG = PostPagingSource::class.simpleName
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Post> {
         return try {
@@ -23,7 +22,7 @@ class MoviePagingSource(
                 LoadResult.Page(
                     data = response.getOrThrow(),
                     prevKey = if (position == 1) null else (position - 1),
-                    nextKey = if (position == 10 /*response.data.total_pages*/) null else (position + 1)
+                    nextKey = if (position == 1 /*response.data.total_pages*/) null else (position + 1)
                 )
             } else {
                 Log.i(TAG, "load: No Response")
